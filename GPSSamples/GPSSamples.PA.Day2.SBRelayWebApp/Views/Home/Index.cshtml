@@ -1,0 +1,58 @@
+﻿@model GPSSamples.PA.Day2.SBRelayWebApp.Models.ProductViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Azure PA: Service Bus - Relay Sample</h1>
+
+<h2>Product  Inventory</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NewProduct.Name)
+        </th>
+        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewProduct.Quantity)
+        </th>
+    </tr>
+
+    @foreach (var item in Model.ProductList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<h2>Add a new Product</h2>
+
+    @using (Html.BeginForm( "AddProduct", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NewProduct.Name, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.NewProduct.Name, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NewProduct.Quantity, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.NewProduct.Quantity, new { @class = "form-control" })
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+    }

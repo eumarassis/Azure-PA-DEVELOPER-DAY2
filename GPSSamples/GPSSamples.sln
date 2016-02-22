@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSSamples.PA.Day2.SBRelayConsole", "GPSSamples.PA.Day2.SBRelayConsole\GPSSamples.PA.Day2.SBRelayConsole.csproj", "{30935FD4-8C6F-4D99-B4C1-569BB175E67C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSSamples.PA.Day2.SBRelayWebApp", "GPSSamples.PA.Day2.SBRelayWebApp\GPSSamples.PA.Day2.SBRelayWebApp.csproj", "{223E9213-0B89-435B-BBC9-774E3B380E68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{6917C106-8CF4-4913-9FB0-779CA8690084}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{035EE0CC-5D53-4FBD-9CC6-25E379FEF1D6}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{90B69CF4-82A3-4789-B4E8-4577ECFC462C}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\GPSSamplesPADay2SBRelayWebApp.json = PublishScripts\Templates\GPSSamplesPADay2SBRelayWebApp.json
+		PublishScripts\Templates\GPSSamplesPADay2SBRelayWebApp.param.dev.json = PublishScripts\Templates\GPSSamplesPADay2SBRelayWebApp.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30935FD4-8C6F-4D99-B4C1-569BB175E67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30935FD4-8C6F-4D99-B4C1-569BB175E67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30935FD4-8C6F-4D99-B4C1-569BB175E67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30935FD4-8C6F-4D99-B4C1-569BB175E67C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223E9213-0B89-435B-BBC9-774E3B380E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223E9213-0B89-435B-BBC9-774E3B380E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223E9213-0B89-435B-BBC9-774E3B380E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223E9213-0B89-435B-BBC9-774E3B380E68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{035EE0CC-5D53-4FBD-9CC6-25E379FEF1D6} = {6917C106-8CF4-4913-9FB0-779CA8690084}
+		{90B69CF4-82A3-4789-B4E8-4577ECFC462C} = {6917C106-8CF4-4913-9FB0-779CA8690084}
+	EndGlobalSection
+EndGlobal
