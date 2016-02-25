@@ -19,11 +19,11 @@ namespace GPSSamples.PA.Day2.SBRelayWebApp.Controllers
         static HomeController() {
             // Create shared secret token credentials for authentication.
             channelFactory = new ChannelFactory<IProductsChannel>(new NetTcpRelayBinding(),
-                "sb://eumar-azurepa.servicebus.windows.net/products");
+                "sb://xxxxxxxx.windows.net/products");
             channelFactory.Endpoint.Behaviors.Add(new TransportClientEndpointBehavior
             {
                 TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider(
-                    "RootManageSharedAccessKey", "iRMmGMm6BqjT8OXvpbIPmAv3Bm2ewRidJFi0NX5+QLI=")
+                    "RootManageSharedAccessKey", "xxxxxxxxxx")
             });
         }
         // Return a view of the products inventory.
